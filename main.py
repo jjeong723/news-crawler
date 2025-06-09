@@ -14,6 +14,8 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
+
+
 class NewsCrawer:
     def __init__(self):
         self.google_key = os.getenv('GOOGLE_SEARCH_API_KEYSEARCH')
