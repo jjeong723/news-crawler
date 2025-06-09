@@ -1,6 +1,3 @@
-from dotenv import load_dotenv
-import os
-
 import pandas as pd
 import requests
 import json
@@ -13,10 +10,12 @@ import time
 from googlenewsdecoder import gnewsdecoder
 import feedparser
 
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 class NewsCrawer:
     def __init__(self):
-        load_dotenv()
         self.google_key = os.getenv('GOOGLE_SEARCH_API_KEYSEARCH')
         self.naver_client = os.getenv('NAVER_CLIENT_ID')
         self.naver_secret = os.getenv('NAVER_CLIENT_SECRET')
